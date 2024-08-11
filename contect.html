@@ -1,48 +1,104 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-  </head>
-  <body><br>
-<form class="" action="index.html" method="post">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
 
-  <table>
-    <tr>
-      <td><label>First Name:</label></td>
-      <td><input type="text" name="First Name " value=""></td>
-      <td><label>Last Name:</label></td>
-      <td><input type="text" name="Last Name" value=""></td>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    </tr>
-  </table><br>
-  <label>DOB:</label>
-  <input type="date" name="DOB" value=""><br><br>
-  <label>Email:     </label>
-  <input type="email" name="Email" value=""><br><br>
-  <label>Password : </label>
-  <input type="password" name="Password" value=""><br><br>
-  <input type="file" name="YourPhoto" value="">
-  <label><strong>Select and Upload Your Photo</strong></label>
-  <br><br>
-  <label>How much do you like this page</label>
-  <label>0</label>
-  <input type="range" name="Like" value="">
-  <label>10</label><br><br>
-  <input type="checkbox" name="" value="">
-  <label> Term and Conditions</label><br><br>
-  <label >Feedback :</label><br>
-  <textarea name="name" rows="10" cols="30"></textarea><br>
-  <input type="submit" name="">
-</form>
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
 
-   <center>
-<br> <br>
-<hr size="3" noshade>
-          Phone No.<a href="tel:+916377683071">6377683071</a> <br>
-          Email : <a href="https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">ravindramalviya06@gmail.com</a> <br>
-          Facebook: <a href="https://www.facebook.com/psychothinker11/">Ravindra Malviya</a>
-<hr size="3" noshade>
+        form label {
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
 
-  </body>
+        form input[type="text"],
+        form input[type="date"],
+        form input[type="email"],
+        form input[type="password"],
+        form input[type="file"],
+        form textarea,
+        form input[type="range"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        form input[type="submit"] {
+            grid-column: 1 / span 2;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            font-size: 2em;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Feedback Form</h3>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+
+            <label for="file">Choose a file</label>
+            <input type="file" id="file" name="file">
+
+            <label for="comment">Your comment</label>
+            <textarea id="comment" name="comment" rows="5"></textarea>
+
+            <label for="rating">Rating</label>
+            <input type="range" id="rating" name="rating" min="1" max="5">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
 </html>
